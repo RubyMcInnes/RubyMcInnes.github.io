@@ -1,0 +1,296 @@
+
+
+body {
+    background-color:rgb(255, 255, 255);
+   
+}
+
+.main-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.two-row-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.two-column-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main-image {
+    width: 150%;      /* larger than grid cell */
+    max-width: none;  /* removes limits */
+    height: auto;
+
+    position: relative;
+    left: -40%; 
+}
+
+.image-holder {
+    position: relative;
+    overflow: visible;
+}
+
+.play-font {
+    font-family: joly-text, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
+@font-face {
+    font-family:"hk";
+    src: url('hkgroteskwide-extrabold.woff') format('woff');
+}
+
+@font-face{
+    font-family: "hkl";
+    src: url('HKGroteskWide-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: "body";
+    src: url('PPMori-Extralight.woff') format('woff');
+}
+
+
+
+div.title {
+    font-family: joly-text, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 200px;
+    text-transform: uppercase;
+    line-height: 150px;
+    text-align: justify;
+}
+
+img {
+    width: 200px;
+    display:block;
+    float:
+}
+
+div.Game {
+    font-family: joly-text, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 200px;
+    text-transform: uppercase;
+    line-height: 150px;
+    margin-left: 500px;
+    text-align:justify;
+}
+
+div.level {
+    font-family: joly-text, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    text-decoration: underline;
+    position: absolute;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+div.l01 {
+    font-family: joly-text, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    text-decoration: underline;
+    position: absolute;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+div.semi{
+    font-family: 'hkl';
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+div.contents {
+    font-family: joly-text, sans-serif; 
+    font-size: 15px;
+    font-style: italic;
+}
+
+div.body {
+    font-family: "body"; 
+    font-size: 14px; 
+}
+
+div.semititle {
+    font-family: url('HKGroteskWide-Light.woff') format('woff');
+    text-transform: ;
+}
+
+div.quote {
+    font-family: joly-text, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 40px; 
+    text-align: justify;
+    text-align-last: justify;
+    width: 120%;
+}
+
+
+div.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.item {
+    padding: 20px;
+    background-color: aqua;
+    margin-top: 300px;
+}
+
+div.qcontainer {
+    margin-top: 200px;
+    display: block;
+    flex-wrap: wrap;
+}
+
+div.width20{
+    width: 16%;
+}
+
+div.width85{
+    width: 85%; 
+}
+
+div.width60{
+    width: 60%;
+}
+
+div.width55{
+    width:55%;
+}
+
+div.width40{
+    width:40%;
+}
+
+div.height200{
+    height: 200px;
+}
+
+div.left25{
+    left: 25%;
+}
+
+div.right20{
+    right: 20%;
+}
+
+div.right16{
+    right: 14%;
+}
+
+div.left16{
+    left: 14%;
+}
+
+div.right32{
+    transform: translateX(32%);
+}
+
+div.left32{
+    left: 32%;
+}
+
+div.margin200{
+    margin-top: 200px;
+}
+
+div.margin400{
+    margin-top: 370px;
+}
+
+div.margin600{
+    margin-top: 870px;
+}
+
+div.margin20{
+    margin-left: 20px;
+}
+
+div.margin32{
+    margin-left: 32%;
+}
+
+div.alignright {
+    text-align: right;
+}
+
+
+
+div.level::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%; /* Moves to center */
+  transform: translateX(-100%); /* Perfectly aligns the center */
+  width: 2px; /* Line thickness */
+  width: 300px;
+  height: 300px; /* Line length */
+  border-right: 2px dashed black; 
+  border-bottom: 2px dashed black;
+
+}
+
+div.l01::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%; /* Moves to center */
+  transform: translateX(0%); /* Perfectly aligns the center */
+  width: 2px; /* Line thickness */
+  height: 300px; /* Line length */
+  width: 300px;
+  border-left: 2px dashed black;   /* Vertical part */
+  border-top: 2px dashed black;
+}
+
+div.image-stack { 
+  flex-direction: column;
+  display: flex;
+  align-items: left;
+  width: 120%;
+  max-width: none;
+  height: auto;   /* Keeps text centered within that width */
+  position: relative;
+}
+
+div.image-stack img {
+  display: block;        /* Removes bottom white space gap */
+  width: 100%;           /* Fills the container exactly */
+  height: auto;        /* Adds spacing between text and image */
+}
+
+
+.image-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    width: 300px; /* controls BOTH image and text */
+}
+
+
+
+div.text-columns {
+    column-width: 250px;
+    column-gap: 30px;
+}
+
+
+
+
+
+
+
