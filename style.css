@@ -2,7 +2,6 @@
 
 body {
     background-color:rgb(255, 255, 255);
-   
 }
 
 .main-grid-container {
@@ -29,6 +28,17 @@ body {
     left: -40%; 
 }
 
+.img-centre-grid {
+    display: grid;
+}
+
+.graph-image{
+    width:100%;
+    max-width: none;
+    height: auto;
+    position: relative;
+}
+
 .image-holder {
     position: relative;
     overflow: visible;
@@ -40,6 +50,7 @@ body {
     font-style: italic;
     text-decoration: underline;
 }
+
 
 
 @font-face {
@@ -109,10 +120,13 @@ div.l01 {
 div.semi{
     font-family: 'hkl';
     text-transform: uppercase;
-    font-size: 100px;
+    font-size: 50px;
+    line-height: 40px;
+    display: inline-block;
+
 }
 
-div.contents {
+.contents {
     font-family: joly-text, sans-serif; 
     font-size: 15px;
     font-style: italic;
@@ -290,7 +304,75 @@ div.text-columns {
 
 
 
+/* TABLE WRAPPER */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* TABLE BASE */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  font-family: serif;
+}
+
+/* ROW LABELS (LEFT SIDE) */
+.row-label {
+  text-align: right;
+  font-style: italic;
+  font-weight: 500;
+  width: 220px;
+}
+
+  td {
+    border: 1px solid #8c8c8c;
+    padding: 14px 18px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  td:first-child {
+    width: 55%;
+  }
 
 
 
 
+
+.flicker-container {
+  position: relative;
+  width: 200px; /* Adjust to your image size */
+  height: 200px;
+  overflow: hidden;
+}
+
+.flicker-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* Hide images by default */
+}
+
+/* Show the first image initially */
+.flicker-container .img-1 {
+  opacity: 1;
+}
+
+/* Trigger animation on hover */
+.flicker-container:hover img {
+  animation: flicker 0.6s infinite;
+}
+
+/* Stagger the animation start for each image to create the "flicker" */
+.flicker-container:hover .img-1 { animation-delay: 0s; }
+.flicker-container:hover .img-2 { animation-delay: 0.2s; }
+.flicker-container:hover .img-3 { animation-delay: 0.4s; }
+
+@keyframes flicker {
+  0%, 33% { opacity: 1; }
+  34%, 100% { opacity: 0; }
+}
